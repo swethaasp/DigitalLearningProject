@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "WiAKpAedSlI1VkKIqBRKvspQjMh7gYs3Yqg2IIWVWHk=",
+  "Source": "NoteManagement.Service.AssignmentApi",
+  "BasePath": "_content/NoteManagement.Service.AssignmentApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "tlR4dbFbswI9iEWaMObOCisun0AtBxAItlZTlhLgXGA=",
+  "Source": "NoteManagement.Services.AuthApi",
+  "BasePath": "_content/NoteManagement.Services.AuthApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
