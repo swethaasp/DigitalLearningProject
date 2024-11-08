@@ -1,2 +1,53 @@
 NoteManagement/.vs/
-.vs
+# Build output folders
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider and VS Code
+.idea/
+.vscode/
+
+# Build artifacts
+*.dll
+*.exe
+*.pdb
+*.cache
+*.ilk
+*.log
+*.wrn
+*.err
+*.asmmeta
+*.csproj.FileListAbsolute.txt
+
+# NuGet Packages
+packages/
+
+# Publish output
+/publish/
+
+# Temporary files
+*.tmp
+*.temp
+*.vsix
+*.nupkg
+*.swp
+
+# Local configuration and secrets
+appsettings.*.json
+secrets.json
+
+# Dotnet user files
+.dotnet_tool/
+.dotnet/tools/
+
+# Generated code and database files
+GeneratedFiles/
+*.mdf
+*.ldf
