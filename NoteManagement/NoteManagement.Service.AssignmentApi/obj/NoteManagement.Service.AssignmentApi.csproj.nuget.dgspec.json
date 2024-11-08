@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj": {}
+    "C:\\Users\\Administrator\\Downloads\\New folder\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj": {}
   },
   "projects": {
-    "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj": {
+    "C:\\Users\\Administrator\\Downloads\\New folder\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Downloads\\New folder\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj",
         "projectName": "NoteManagement.Service.AssignmentApi",
-        "projectPath": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj",
+        "projectPath": "C:\\Users\\Administrator\\Downloads\\New folder\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\Downloads\\New folder\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

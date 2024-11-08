@@ -457,11 +457,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.NoteApi\\NoteManagement.Services.NoteApi.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Downloads\\New folder\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.NoteApi\\NoteManagement.Services.NoteApi.csproj",
       "projectName": "NoteManagement.Services.NoteApi",
-      "projectPath": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.NoteApi\\NoteManagement.Services.NoteApi.csproj",
+      "projectPath": "C:\\Users\\Administrator\\Downloads\\New folder\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.NoteApi\\NoteManagement.Services.NoteApi.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.NoteApi\\obj\\",
+      "outputPath": "C:\\Users\\Administrator\\Downloads\\New folder\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.NoteApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -527,13 +527,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.NoteApi\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

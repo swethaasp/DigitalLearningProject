@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj": {}
+    "C:\\Users\\Administrator\\Downloads\\New folder\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj": {}
   },
   "projects": {
-    "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj": {
+    "C:\\Users\\Administrator\\Downloads\\New folder\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Downloads\\New folder\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj",
         "projectName": "NoteManagement.Services.SessionApi",
-        "projectPath": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj",
+        "projectPath": "C:\\Users\\Administrator\\Downloads\\New folder\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\Downloads\\New folder\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NoteManagement.Service.AssignmentApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51766b80953b5a6dd2648b2ef046ca4c4af352d7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85ffe46f624f838ff6810ad5103b83435a4aebcd")]
 [assembly: System.Reflection.AssemblyProductAttribute("NoteManagement.Service.AssignmentApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NoteManagement.Service.AssignmentApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

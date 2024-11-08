@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 @NoteManagement.Services.UserApi_HostAddress = http://localhost:5207
-=======
-@NoteManagement.Services.UserApi_HostAddress = http://localhost:5006
->>>>>>> cda958d983a39b77ca552aa11468a207e9dda2a7
 
 GET {{NoteManagement.Services.UserApi_HostAddress}}/weatherforecast/
 Accept: application/json

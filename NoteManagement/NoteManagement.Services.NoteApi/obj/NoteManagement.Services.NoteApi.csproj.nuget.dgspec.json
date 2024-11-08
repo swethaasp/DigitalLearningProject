@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.NoteApi\\NoteManagement.Services.NoteApi.csproj": {}
+    "C:\\Users\\Administrator\\Downloads\\New folder\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.NoteApi\\NoteManagement.Services.NoteApi.csproj": {}
   },
   "projects": {
-    "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.NoteApi\\NoteManagement.Services.NoteApi.csproj": {
+    "C:\\Users\\Administrator\\Downloads\\New folder\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.NoteApi\\NoteManagement.Services.NoteApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.NoteApi\\NoteManagement.Services.NoteApi.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Downloads\\New folder\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.NoteApi\\NoteManagement.Services.NoteApi.csproj",
         "projectName": "NoteManagement.Services.NoteApi",
-        "projectPath": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.NoteApi\\NoteManagement.Services.NoteApi.csproj",
+        "projectPath": "C:\\Users\\Administrator\\Downloads\\New folder\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.NoteApi\\NoteManagement.Services.NoteApi.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.NoteApi\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\Downloads\\New folder\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.NoteApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
