@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "tFFgWlGSgIMGtGD/FrfWHIIfSQBRcaYO8py3nn5peno=",
+  "Source": "NoteManagement.Services.SessionApi",
+  "BasePath": "_content/NoteManagement.Services.SessionApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

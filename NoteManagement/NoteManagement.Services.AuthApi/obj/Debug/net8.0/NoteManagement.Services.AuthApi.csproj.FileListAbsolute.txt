@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\Project\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\bin\Debug\net8.0\appsettings.Development.json
 D:\Project\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\bin\Debug\net8.0\appsettings.json
 D:\Project\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\bin\Debug\net8.0\NoteManagement.Services.AuthApi.exe
@@ -31,3 +32,38 @@ D:\Project\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi
 D:\Project\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\NoteManagement.Services.AuthApi.pdb
 D:\Project\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\NoteManagement.Services.AuthApi.genruntimeconfig.cache
 D:\Project\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\ref\NoteManagement.Services.AuthApi.dll
+=======
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\bin\Debug\net8.0\appsettings.Development.json
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\bin\Debug\net8.0\appsettings.json
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\bin\Debug\net8.0\NoteManagement.Services.AuthApi.exe
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\bin\Debug\net8.0\NoteManagement.Services.AuthApi.deps.json
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\bin\Debug\net8.0\NoteManagement.Services.AuthApi.runtimeconfig.json
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\bin\Debug\net8.0\NoteManagement.Services.AuthApi.dll
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\bin\Debug\net8.0\NoteManagement.Services.AuthApi.pdb
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\NoteManagement.Services.AuthApi.csproj.AssemblyReference.cache
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\NoteManagement.Services.AuthApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\NoteManagement.Services.AuthApi.AssemblyInfoInputs.cache
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\NoteManagement.Services.AuthApi.AssemblyInfo.cs
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\NoteManagement.Services.AuthApi.csproj.CoreCompileInputs.cache
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\NoteManagement.Services.AuthApi.MvcApplicationPartsAssemblyInfo.cs
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\NoteManagement.Services.AuthApi.MvcApplicationPartsAssemblyInfo.cache
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\NoteManagement.Services.AuthApi.sourcelink.json
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\staticwebassets.build.json
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\staticwebassets.development.json
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\staticwebassets\msbuild.NoteManagement.Services.AuthApi.Microsoft.AspNetCore.StaticWebAssets.props
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\staticwebassets\msbuild.build.NoteManagement.Services.AuthApi.props
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.NoteManagement.Services.AuthApi.props
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.NoteManagement.Services.AuthApi.props
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\staticwebassets.pack.json
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\scopedcss\bundle\NoteManagement.Services.AuthApi.styles.css
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\NoteMana.0454D419.Up2Date
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\NoteManagement.Services.AuthApi.dll
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\refint\NoteManagement.Services.AuthApi.dll
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\NoteManagement.Services.AuthApi.pdb
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\NoteManagement.Services.AuthApi.genruntimeconfig.cache
+D:\PROJECT\DigitalLearningProject\NoteManagement\NoteManagement.Services.AuthApi\obj\Debug\net8.0\ref\NoteManagement.Services.AuthApi.dll
+>>>>>>> cda958d983a39b77ca552aa11468a207e9dda2a7

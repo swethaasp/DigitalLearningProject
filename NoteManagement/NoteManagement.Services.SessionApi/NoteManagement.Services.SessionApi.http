@@ -1,0 +1,6 @@
+@NoteManagement.Services.SessionApi_HostAddress = http://localhost:5211
+
+GET {{NoteManagement.Services.SessionApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

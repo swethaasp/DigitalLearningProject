@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\NoteManagement.Services.UserApi.csproj": {}
   },
   "projects": {
@@ -19,6 +20,22 @@
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+=======
+    "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\NoteManagement.Services.UserApi.csproj": {}
+  },
+  "projects": {
+    "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\NoteManagement.Services.UserApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\NoteManagement.Services.UserApi.csproj",
+        "projectName": "NoteManagement.Services.UserApi",
+        "projectPath": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\NoteManagement.Services.UserApi.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> cda958d983a39b77ca552aa11468a207e9dda2a7
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -50,6 +67,7 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+<<<<<<< HEAD
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.10, )"
@@ -64,6 +82,8 @@
               "target": "Package",
               "version": "[8.0.10, )"
             },
+=======
+>>>>>>> cda958d983a39b77ca552aa11468a207e9dda2a7
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
