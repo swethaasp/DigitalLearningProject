@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NoteManagement.Services.AuthApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b887587a0b0b63cee3192b59550d2c5ff69c31c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("NoteManagement.Services.AuthApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NoteManagement.Services.AuthApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

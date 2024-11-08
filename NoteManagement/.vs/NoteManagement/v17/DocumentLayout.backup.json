@@ -1,7 +1,39 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Project\\NoteManagement\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\Project\\DigitalLearningProject\\NoteManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ACA2A0EB-BAC3-4CDE-BBCA-0C080C14E2D6}|NoteManagement.Services.UserApi\\NoteManagement.Services.UserApi.csproj|d:\\project\\digitallearningproject\\notemanagement\\notemanagement.services.userapi\\services\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACA2A0EB-BAC3-4CDE-BBCA-0C080C14E2D6}|NoteManagement.Services.UserApi\\NoteManagement.Services.UserApi.csproj|solutionrelative:notemanagement.services.userapi\\services\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACA2A0EB-BAC3-4CDE-BBCA-0C080C14E2D6}|NoteManagement.Services.UserApi\\NoteManagement.Services.UserApi.csproj|d:\\project\\digitallearningproject\\notemanagement\\notemanagement.services.userapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACA2A0EB-BAC3-4CDE-BBCA-0C080C14E2D6}|NoteManagement.Services.UserApi\\NoteManagement.Services.UserApi.csproj|solutionrelative:notemanagement.services.userapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/NoteManagement.user/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACA2A0EB-BAC3-4CDE-BBCA-0C080C14E2D6}|NoteManagement.Services.UserApi\\NoteManagement.Services.UserApi.csproj|d:\\project\\digitallearningproject\\notemanagement\\notemanagement.services.userapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACA2A0EB-BAC3-4CDE-BBCA-0C080C14E2D6}|NoteManagement.Services.UserApi\\NoteManagement.Services.UserApi.csproj|solutionrelative:notemanagement.services.userapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACA2A0EB-BAC3-4CDE-BBCA-0C080C14E2D6}|NoteManagement.Services.UserApi\\NoteManagement.Services.UserApi.csproj|d:\\project\\digitallearningproject\\notemanagement\\notemanagement.services.userapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACA2A0EB-BAC3-4CDE-BBCA-0C080C14E2D6}|NoteManagement.Services.UserApi\\NoteManagement.Services.UserApi.csproj|solutionrelative:notemanagement.services.userapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACA2A0EB-BAC3-4CDE-BBCA-0C080C14E2D6}|NoteManagement.Services.UserApi\\NoteManagement.Services.UserApi.csproj|d:\\project\\digitallearningproject\\notemanagement\\notemanagement.services.userapi\\services\\iuserservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACA2A0EB-BAC3-4CDE-BBCA-0C080C14E2D6}|NoteManagement.Services.UserApi\\NoteManagement.Services.UserApi.csproj|solutionrelative:notemanagement.services.userapi\\services\\iuserservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACA2A0EB-BAC3-4CDE-BBCA-0C080C14E2D6}|NoteManagement.Services.UserApi\\NoteManagement.Services.UserApi.csproj|d:\\project\\digitallearningproject\\notemanagement\\notemanagement.services.userapi\\data\\userdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACA2A0EB-BAC3-4CDE-BBCA-0C080C14E2D6}|NoteManagement.Services.UserApi\\NoteManagement.Services.UserApi.csproj|solutionrelative:notemanagement.services.userapi\\data\\userdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACA2A0EB-BAC3-4CDE-BBCA-0C080C14E2D6}|NoteManagement.Services.UserApi\\NoteManagement.Services.UserApi.csproj|d:\\project\\digitallearningproject\\notemanagement\\notemanagement.services.userapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{ACA2A0EB-BAC3-4CDE-BBCA-0C080C14E2D6}|NoteManagement.Services.UserApi\\NoteManagement.Services.UserApi.csproj|solutionrelative:notemanagement.services.userapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +41,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\Models\\User.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.UserApi\\Models\\User.cs",
+              "ToolTip": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\Models\\User.cs",
+              "RelativeToolTip": "NoteManagement.Services.UserApi\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T06:53:14.508Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dbo.Users [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/NoteManagement.user/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-08T04:50:18.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.UserApi\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\Controllers\\UserController.cs",
+              "RelativeToolTip": "NoteManagement.Services.UserApi\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAwwEgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T03:12:25.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserServices.cs",
+              "DocumentMoniker": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\Services\\UserServices.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.UserApi\\Services\\UserServices.cs",
+              "ToolTip": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\Services\\UserServices.cs*",
+              "RelativeToolTip": "NoteManagement.Services.UserApi\\Services\\UserServices.cs*",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowCUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T10:12:33.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IUserServices.cs",
+              "DocumentMoniker": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\Services\\IUserServices.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.UserApi\\Services\\IUserServices.cs",
+              "ToolTip": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\Services\\IUserServices.cs",
+              "RelativeToolTip": "NoteManagement.Services.UserApi\\Services\\IUserServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T10:08:44.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\Program.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.UserApi\\Program.cs",
+              "ToolTip": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\Program.cs",
+              "RelativeToolTip": "NoteManagement.Services.UserApi\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAUwBcAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T10:00:42.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\appsettings.json",
+              "RelativeDocumentMoniker": "NoteManagement.Services.UserApi\\appsettings.json",
+              "ToolTip": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\appsettings.json",
+              "RelativeToolTip": "NoteManagement.Services.UserApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAB0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-07T09:59:15.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserDbContext.cs",
+              "DocumentMoniker": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\Data\\UserDbContext.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.UserApi\\Data\\UserDbContext.cs",
+              "ToolTip": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.UserApi\\Data\\UserDbContext.cs",
+              "RelativeToolTip": "NoteManagement.Services.UserApi\\Data\\UserDbContext.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAIwAkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T07:12:10.089Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
