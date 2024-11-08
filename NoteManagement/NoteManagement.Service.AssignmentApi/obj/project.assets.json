@@ -447,19 +447,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj",
+      "projectUniqueName": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj",
       "projectName": "NoteManagement.Service.AssignmentApi",
-      "projectPath": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj",
+      "projectPath": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\obj\\",
+      "outputPath": "D:\\Project\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
