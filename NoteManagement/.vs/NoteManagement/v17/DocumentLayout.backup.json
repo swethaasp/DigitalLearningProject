@@ -1,7 +1,88 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Project\\NoteManagement\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107195251_start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NoteManagement.Services.SessionApi\\Migrations\\20241107195251_start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBCDECE7-0850-4148-89E5-189B505C7E89}|NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj|d:\\project\\digitallearningproject\\notemanagement\\notemanagement.services.sessionapi\\controllers\\sessioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBCDECE7-0850-4148-89E5-189B505C7E89}|NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj|solutionrelative:notemanagement.services.sessionapi\\controllers\\sessioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBCDECE7-0850-4148-89E5-189B505C7E89}|NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj|d:\\project\\digitallearningproject\\notemanagement\\notemanagement.services.sessionapi\\models\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBCDECE7-0850-4148-89E5-189B505C7E89}|NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj|solutionrelative:notemanagement.services.sessionapi\\models\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBCDECE7-0850-4148-89E5-189B505C7E89}|NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj|d:\\project\\digitallearningproject\\notemanagement\\notemanagement.services.sessionapi\\services\\sessionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBCDECE7-0850-4148-89E5-189B505C7E89}|NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj|solutionrelative:notemanagement.services.sessionapi\\services\\sessionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBCDECE7-0850-4148-89E5-189B505C7E89}|NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj|d:\\project\\digitallearningproject\\notemanagement\\notemanagement.services.sessionapi\\services\\isessionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBCDECE7-0850-4148-89E5-189B505C7E89}|NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj|solutionrelative:notemanagement.services.sessionapi\\services\\isessionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBCDECE7-0850-4148-89E5-189B505C7E89}|NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj|d:\\project\\digitallearningproject\\notemanagement\\notemanagement.services.sessionapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBCDECE7-0850-4148-89E5-189B505C7E89}|NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj|solutionrelative:notemanagement.services.sessionapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBCDECE7-0850-4148-89E5-189B505C7E89}|NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj|d:\\project\\digitallearningproject\\notemanagement\\notemanagement.services.sessionapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBCDECE7-0850-4148-89E5-189B505C7E89}|NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj|solutionrelative:notemanagement.services.sessionapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBCDECE7-0850-4148-89E5-189B505C7E89}|NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj|d:\\project\\digitallearningproject\\notemanagement\\notemanagement.services.sessionapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EBCDECE7-0850-4148-89E5-189B505C7E89}|NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj|solutionrelative:notemanagement.services.sessionapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107175834_deleted navigational property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NoteManagement.Services.SessionApi\\Migrations\\20241107175834_deleted navigational property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107175118_initial 1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NoteManagement.Services.SessionApi\\Migrations\\20241107175118_initial 1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107175047_si.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NoteManagement.Services.SessionApi\\Migrations\\20241107175047_si.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107174025_s.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NoteManagement.Services.SessionApi\\Migrations\\20241107174025_s.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E716F53-A519-4BB1-8202-F9A536254B63}|NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj|d:\\project\\digitallearningproject\\notemanagement\\notemanagement.service.assignmentapi\\models\\assignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E716F53-A519-4BB1-8202-F9A536254B63}|NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj|solutionrelative:notemanagement.service.assignmentapi\\models\\assignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E716F53-A519-4BB1-8202-F9A536254B63}|NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj|d:\\project\\digitallearningproject\\notemanagement\\notemanagement.service.assignmentapi\\notemanagement.service.assignmentapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3E716F53-A519-4BB1-8202-F9A536254B63}|NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj|solutionrelative:notemanagement.service.assignmentapi\\notemanagement.service.assignmentapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBCDECE7-0850-4148-89E5-189B505C7E89}|NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj|d:\\project\\digitallearningproject\\notemanagement\\notemanagement.services.sessionapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EBCDECE7-0850-4148-89E5-189B505C7E89}|NoteManagement.Services.SessionApi\\NoteManagement.Services.SessionApi.csproj|solutionrelative:notemanagement.services.sessionapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107154157_InitialMigration2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NoteManagement.Services.SessionApi\\Migrations\\20241107154157_InitialMigration2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107153437_InitialMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NoteManagement.Services.SessionApi\\Migrations\\20241107153437_InitialMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107151946_UpdatedSessionForeignKey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NoteManagement.Services.SessionApi\\Migrations\\20241107151946_UpdatedSessionForeignKey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107150823_session initiate1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NoteManagement.Services.SessionApi\\Migrations\\20241107150823_session initiate1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107145616_session initiate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NoteManagement.Services.SessionApi\\Migrations\\20241107145616_session initiate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +90,261 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20241107195251_start.cs",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107195251_start.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.SessionApi\\Migrations\\20241107195251_start.cs",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107195251_start.cs",
+              "RelativeToolTip": "NoteManagement.Services.SessionApi\\Migrations\\20241107195251_start.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T19:52:51.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Session.cs",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Models\\Session.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.SessionApi\\Models\\Session.cs",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Models\\Session.cs",
+              "RelativeToolTip": "NoteManagement.Services.SessionApi\\Models\\Session.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA2wBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T16:33:31.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ISessionRepository.cs",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Services\\ISessionRepository.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.SessionApi\\Services\\ISessionRepository.cs",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Services\\ISessionRepository.cs",
+              "RelativeToolTip": "NoteManagement.Services.SessionApi\\Services\\ISessionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T17:55:46.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SessionRepository.cs",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Services\\SessionRepository.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.SessionApi\\Services\\SessionRepository.cs",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Services\\SessionRepository.cs",
+              "RelativeToolTip": "NoteManagement.Services.SessionApi\\Services\\SessionRepository.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAxwDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T16:19:03.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Program.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.SessionApi\\Program.cs",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Program.cs",
+              "RelativeToolTip": "NoteManagement.Services.SessionApi\\Program.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T16:18:22.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SessionController.cs",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Controllers\\SessionController.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.SessionApi\\Controllers\\SessionController.cs",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Controllers\\SessionController.cs",
+              "RelativeToolTip": "NoteManagement.Services.SessionApi\\Controllers\\SessionController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAkwFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T16:12:56.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.SessionApi\\Data\\AppDbContext.cs",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "NoteManagement.Services.SessionApi\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T16:21:36.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\appsettings.json",
+              "RelativeDocumentMoniker": "NoteManagement.Services.SessionApi\\appsettings.json",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\appsettings.json",
+              "RelativeToolTip": "NoteManagement.Services.SessionApi\\appsettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-07T16:22:40.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20241107175118_initial 1.cs",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107175118_initial 1.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.SessionApi\\Migrations\\20241107175118_initial 1.cs",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107175118_initial 1.cs",
+              "RelativeToolTip": "NoteManagement.Services.SessionApi\\Migrations\\20241107175118_initial 1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T17:51:18.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20241107175834_deleted navigational property.cs",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107175834_deleted navigational property.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.SessionApi\\Migrations\\20241107175834_deleted navigational property.cs",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107175834_deleted navigational property.cs",
+              "RelativeToolTip": "NoteManagement.Services.SessionApi\\Migrations\\20241107175834_deleted navigational property.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T17:58:34.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20241107175047_si.cs",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107175047_si.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.SessionApi\\Migrations\\20241107175047_si.cs",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107175047_si.cs",
+              "RelativeToolTip": "NoteManagement.Services.SessionApi\\Migrations\\20241107175047_si.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T17:50:48.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Assignment.cs",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\Models\\Assignment.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Service.AssignmentApi\\Models\\Assignment.cs",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\Models\\Assignment.cs",
+              "RelativeToolTip": "NoteManagement.Service.AssignmentApi\\Models\\Assignment.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAYwAkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T17:37:32.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "NoteManagement.Service.AssignmentApi",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj",
+              "RelativeDocumentMoniker": "NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj",
+              "RelativeToolTip": "NoteManagement.Service.AssignmentApi\\NoteManagement.Service.AssignmentApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-07T17:38:03.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20241107174025_s.cs",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107174025_s.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.SessionApi\\Migrations\\20241107174025_s.cs",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107174025_s.cs",
+              "RelativeToolTip": "NoteManagement.Services.SessionApi\\Migrations\\20241107174025_s.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T17:40:25.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "NoteManagement.Services.SessionApi\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "NoteManagement.Services.SessionApi\\Properties\\launchSettings.json",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-07T16:10:27.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20241107154157_InitialMigration2.cs",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107154157_InitialMigration2.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.SessionApi\\Migrations\\20241107154157_InitialMigration2.cs",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107154157_InitialMigration2.cs",
+              "RelativeToolTip": "NoteManagement.Services.SessionApi\\Migrations\\20241107154157_InitialMigration2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T15:41:58.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "20241107153437_InitialMigration.cs",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107153437_InitialMigration.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.SessionApi\\Migrations\\20241107153437_InitialMigration.cs",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107153437_InitialMigration.cs",
+              "RelativeToolTip": "NoteManagement.Services.SessionApi\\Migrations\\20241107153437_InitialMigration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T15:34:37.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "20241107151946_UpdatedSessionForeignKey.cs",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107151946_UpdatedSessionForeignKey.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.SessionApi\\Migrations\\20241107151946_UpdatedSessionForeignKey.cs",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107151946_UpdatedSessionForeignKey.cs",
+              "RelativeToolTip": "NoteManagement.Services.SessionApi\\Migrations\\20241107151946_UpdatedSessionForeignKey.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T15:19:46.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "20241107150823_session initiate1.cs",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107150823_session initiate1.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.SessionApi\\Migrations\\20241107150823_session initiate1.cs",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107150823_session initiate1.cs",
+              "RelativeToolTip": "NoteManagement.Services.SessionApi\\Migrations\\20241107150823_session initiate1.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T15:08:23.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20241107145616_session initiate.cs",
+              "DocumentMoniker": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107145616_session initiate.cs",
+              "RelativeDocumentMoniker": "NoteManagement.Services.SessionApi\\Migrations\\20241107145616_session initiate.cs",
+              "ToolTip": "D:\\PROJECT\\DigitalLearningProject\\NoteManagement\\NoteManagement.Services.SessionApi\\Migrations\\20241107145616_session initiate.cs",
+              "RelativeToolTip": "NoteManagement.Services.SessionApi\\Migrations\\20241107145616_session initiate.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAgwB0AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T14:56:17.233Z"
             }
           ]
         }

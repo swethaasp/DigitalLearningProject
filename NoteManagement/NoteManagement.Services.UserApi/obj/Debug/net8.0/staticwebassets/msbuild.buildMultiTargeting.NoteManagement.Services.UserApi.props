@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\NoteManagement.Services.UserApi.props" />
+</Project>

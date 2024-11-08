@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\NoteManagement.Services.NoteApi.props" />
+</Project>
