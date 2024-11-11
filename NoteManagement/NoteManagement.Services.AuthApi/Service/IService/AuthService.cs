@@ -91,6 +91,12 @@ namespace NoteManagement.Srevices.AuthApi.Service.IService
                     DisplayName = registrationRequestDto.Name
                 };
 
+                var StreakData = new StreakDto
+                {
+                    IdentityUserId = user.Id,
+                    Streak = 0
+                };
+
                 // Call User API to save additional user information
                 var userApiUrl = "https://localhost:7080/api/User"; // Replace with actual URL
                 var userContent = new StringContent(JsonSerializer.Serialize(userData), Encoding.UTF8, "application/json");
@@ -102,8 +108,19 @@ namespace NoteManagement.Srevices.AuthApi.Service.IService
                     return  "Failed to save user info in User API.";
                 }
 
-                
-            
+                // Call Streak API to save additional user information
+                var StreakApiUrl = "https://localhost:7055/api/Streak/Create"; // Replace with actual URL
+                var StreakContent = new StringContent(JsonSerializer.Serialize(StreakData), Encoding.UTF8, "application/json");
+
+                var respon = await _httpClient.PostAsync(StreakApiUrl, StreakContent);
+
+                if (!respon.IsSuccessStatusCode)
+                {
+                    return "Failed to save Streak info in Streak API.";
+                }
+
+
+
                 var result = await _userManager.CreateAsync(user, registrationRequestDto.Password);
                 if (result.Succeeded)
                 {
