@@ -1,4 +1,5 @@
-﻿using NoteManagement.Services.UserApi.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using NoteManagement.Services.UserApi.Data;
 using NoteManagement.Services.UserApi.Models;
 
 namespace NoteManagement.Services.UserApi.Services
@@ -44,6 +45,11 @@ namespace NoteManagement.Services.UserApi.Services
                 
                 return false;
             }
+        }
+
+        public IEnumerable<User> getall()
+        {
+            return _db.Users.ToList();
         }
 
         public User? GetUser(string id)

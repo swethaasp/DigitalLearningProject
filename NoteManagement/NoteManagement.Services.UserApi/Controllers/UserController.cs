@@ -16,6 +16,13 @@ namespace NoteManagement.Services.UserApi.Controllers
         {
             _user = user;
         }
+        [HttpGet]
+        public IActionResult Get()
+        {
+            var response = _user.getall();
+            return Ok(response);
+        }
+
 
         [HttpGet("{id}")]
         public IActionResult Get(string id)
