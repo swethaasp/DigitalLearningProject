@@ -1,36 +1,31 @@
+using Microsoft.EntityFrameworkCore;
+using NoteManagement.Services.NoteApi.Data;
+using NoteManagement.Services.NoteApi.Repository;
 
-namespace NoteManagement.Services.NoteApi
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<INoteRepository, NoteRepository>();  // Register the NoteRepository
+builder.Services.AddControllers();  
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(); // Needed for Swagger
+
+var app = builder.Build();
+app.UseDeveloperExceptionPage();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder(args);
-
-            // Add services to the container.
-
-            builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
-
-            var app = builder.Build();
-
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
-
-            app.UseHttpsRedirection();
-
-            app.UseAuthorization();
-
-
-            app.MapControllers();
-
-            app.Run();
-        }
-    }
+    app.UseSwagger();
+    app.UseSwaggerUI(); // Enables Swagger UI for testing endpoints
 }
+
+app.UseHttpsRedirection();
+app.UseAuthorization();
+
+app.MapControllers();  // Ensure this line is in place to map the controllers
+
+app.Run();

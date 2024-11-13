@@ -1,9 +1,21 @@
+import { enableProdMode, importProvidersFrom } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { provideRouter } from '@angular/router';
+import { SessionComponent } from './app/pages/session/session.component';
 import { provideHttpClient } from '@angular/common/http';
-import { appRoutes } from './app/app.routes';
-import { SessionComponent } from './app/pages/session.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AssignmentComponent } from './app/pages/assignment/assignment.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
-bootstrapApplication(SessionComponent, {
-  providers: [provideRouter(appRoutes), provideHttpClient()],
-}).catch(err => console.error(err));
+
+bootstrapApplication(AssignmentComponent, {
+  providers: [
+    provideHttpClient(),
+    importProvidersFrom(BrowserAnimationsModule),
+  ]
+}).catch((err) => console.error(err));
+
+
+
+
+
