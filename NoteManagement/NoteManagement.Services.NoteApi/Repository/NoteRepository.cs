@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NoteManagement.Services.NoteApi.Data;
 using NoteManagement.Services.NoteApi.Models;
+using System.Runtime.InteropServices;
 
 namespace NoteManagement.Services.NoteApi.Repository
 {
@@ -13,20 +14,20 @@ namespace NoteManagement.Services.NoteApi.Repository
             _context = context;
         }
 
-        public async Task<IEnumerable<Note>> GetNotesByUser(int userId)
+        public async Task<IEnumerable<Note>> GetNotesByUser(string userId)
         {
             return await _context.Notes.Where(n => n.UserId == userId).ToListAsync();
         }
 
-        public async Task<Note> GetNoteByCreatedDate(DateTime dateCreated) // Updated method name
+        public async Task<List<Note>> GetNoteByCreatedDate(DateTime dateCreated) // Updated method name
         {
-            return await _context.Notes.FirstOrDefaultAsync(n => n.DateCreated.Date == dateCreated.Date);
+            return await _context.Notes.Where(n => n.DateCreated.Date == dateCreated.Date).ToListAsync();
         }
 
 
-        public async Task<Note> GetNoteByModifiedDate(DateTime dateModified)
+        public async Task<List<Note>> GetNoteByModifiedDate(DateTime dateModified)
         {
-            return await _context.Notes.FirstOrDefaultAsync(n => n.DateModified.Date == dateModified.Date);
+            return await _context.Notes.Where(n => n.DateModified.Date == dateModified.Date).ToListAsync()  ;
         }
 
         public async Task<Note> CreateNote(Note note)
@@ -36,11 +37,21 @@ namespace NoteManagement.Services.NoteApi.Repository
             return note;
         }
 
-        public async Task<Note> UpdateNote(Note note)
+        public async Task<bool> UpdateNote(int id,Note note)
         {
-            _context.Notes.Update(note);
+            var n = _context.Notes.FirstOrDefault(n => n.Id==id);
+            if (n==null)
+            {
+                return false;
+            }
+            n.Title=note.Title;
+            n.Description=note.Description;
+            n.DateCreated= note.DateCreated;
+            n.DateModified=note.DateModified;
+            n.Resources = note.Resources;
+            
             await _context.SaveChangesAsync();
-            return note;
+            return true;
         }
 
         public async Task<bool> DeleteNote(int id)

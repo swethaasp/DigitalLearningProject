@@ -11,6 +11,6 @@ namespace NoteManagement.Services.SessionApi.Models
         public string Description { get; set; } // Description of the session
         public string Resources { get; set; }   // Resources or materials associated with the session
         public int AssignmentId { get; set; }   // Foreign key to Assignment
-        public int UserId { get; set; }         // Foreign key to User
+        public string UserId { get; set; }         // Foreign key to User
     }
 }

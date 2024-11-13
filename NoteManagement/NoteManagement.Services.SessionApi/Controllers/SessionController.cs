@@ -21,7 +21,7 @@ namespace NoteManagement.Services.SessionApi.Controllers
 
         // GET: api/Session/user/{userId}
         [HttpGet("user/{userId}")]
-        public async Task<ActionResult<IEnumerable<Session>>> GetAllSessionsByUser(int userId)
+        public async Task<ActionResult<IEnumerable<Session>>> GetAllSessionsByUser(string userId)
         {
             var sessions = await _repository.GetAllSessionsByUser(userId);
             if (sessions == null || !sessions.Any())
@@ -64,10 +64,9 @@ namespace NoteManagement.Services.SessionApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateSession(int id, Session session)
         {
-            if (id != session.Id)
-                return BadRequest("Session ID mismatch"); // HTTP 400
+            
 
-            await _repository.UpdateSession(session);
+            await _repository.UpdateSession(id,session);
             return NoContent(); // HTTP 204 No Content
         }
 

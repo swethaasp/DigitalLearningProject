@@ -1,0 +1,109 @@
+﻿{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5000"
+
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/auth/{everything}",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/auth/{everything}",
+      "DownstreamScheme": "Https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "FileCacheOptions": { "TtlSeconds": 10 }
+    },
+
+    {
+      "UpstreamPathTemplate": "/assignment/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "DownstreamPathTemplate": "/api/Assignment/{everything}",
+      "DownstreamScheme": "Https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "FileCacheOptions": { "TtlSeconds": 10 }
+    },
+
+    {
+      "UpstreamPathTemplate": "/leaderboard/{everything}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/Leaderboard/{everything}",
+      "DownstreamScheme": "Https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "FileCacheOptions": { "TtlSeconds": 10 }
+    },
+
+    {
+      "UpstreamPathTemplate": "/notes/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "DownstreamPathTemplate": "/api/Note/{everything}",
+      "DownstreamScheme": "Https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "FileCacheOptions": { "TtlSeconds": 10 }
+    },
+
+
+    {
+      "UpstreamPathTemplate": "/sessions/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "DownstreamPathTemplate": "/api/Session/{everything}",
+      "DownstreamScheme": "Https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5005
+        }
+      ],
+      "FileCacheOptions": { "TtlSeconds": 10 }
+    },
+
+    {
+      "UpstreamPathTemplate": "/streak/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamPathTemplate": "/api/Streak/{everything}",
+      "DownstreamScheme": "Https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5006
+        }
+      ],
+      "FileCacheOptions": { "TtlSeconds": 10 }
+    },
+
+    {
+      "UpstreamPathTemplate": "/user/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "DownstreamPathTemplate": "/api/User/{everything}",
+      "DownstreamScheme": "Https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "FileCacheOptions": { "TtlSeconds": 10 }
+    }
+
+
+
+  ]
+}

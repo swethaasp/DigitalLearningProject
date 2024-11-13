@@ -8,6 +8,6 @@
         public string Title { get; set; }
         public string Description { get; set; }
         public string Resources { get; set; }
-        public int UserId { get; set; } // Foreign Key for User
+        public string UserId { get; set; } 
     }
 }

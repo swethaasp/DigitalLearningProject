@@ -15,16 +15,11 @@ namespace NoteManagement.Services.AssignmentApi.Controllers
             _assignmentRepository = assignmentRepository;
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetAssignmentById(int id)
-        {
-            var assignment = await _assignmentRepository.GetAssignmentById(id);
-            if (assignment == null) return NotFound();
-            return Ok(assignment);
-        }
+        
+        
 
         [HttpGet("byuser/{userId}")]
-        public async Task<IActionResult> GetAssignmentsByUser(int userId)
+        public async Task<IActionResult> GetAssignmentsByUser(string userId)
         {
             var assignments = await _assignmentRepository.GetAssignmentsByUser(userId);
             return Ok(assignments);
@@ -55,14 +50,14 @@ namespace NoteManagement.Services.AssignmentApi.Controllers
         public async Task<IActionResult> CreateAssignment([FromBody] Assignment assignment)
         {
             var createdAssignment = await _assignmentRepository.CreateAssignment(assignment);
-            return CreatedAtAction(nameof(GetAssignmentById), new { id = createdAssignment.Id }, createdAssignment);
+            return Ok();
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateAssignment(int id, [FromBody] Assignment assignment)
         {
-            if (id != assignment.Id) return BadRequest();
-            await _assignmentRepository.UpdateAssignment(assignment);
+           
+            await _assignmentRepository.UpdateAssignment(id,assignment);
             return NoContent();
         }
 

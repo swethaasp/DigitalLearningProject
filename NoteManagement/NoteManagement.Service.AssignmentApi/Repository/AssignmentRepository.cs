@@ -14,12 +14,9 @@ namespace NoteManagement.Services.AssignmentApi.Repository
             _context = context;
         }
 
-        public async Task<Assignment> GetAssignmentById(int id)
-        {
-            return await _context.Assignments.FindAsync(id);
-        }
+        
 
-        public async Task<IEnumerable<Assignment>> GetAssignmentsByUser(int userId)
+        public async Task<IEnumerable<Assignment>> GetAssignmentsByUser(string userId)
         {
             return await _context.Assignments.Where(a => a.UserId == userId).ToListAsync();
         }
@@ -46,11 +43,20 @@ namespace NoteManagement.Services.AssignmentApi.Repository
             return assignment;
         }
 
-        public async Task<Assignment> UpdateAssignment(Assignment assignment)
+        public async Task<bool> UpdateAssignment(int id,Assignment assignment)
         {
-            _context.Assignments.Update(assignment);
+            var asmnt =_context.Assignments.FirstOrDefault(a => a.Id==id);
+            if (asmnt==null)
+            {
+                return false;
+            }
+            asmnt.Title=assignment.Title;
+            asmnt.Status=assignment.Status;
+            asmnt.Deadline=assignment.Deadline;
+            asmnt.DateAssigned=assignment.DateAssigned;
+            asmnt.Description=assignment.Description;
             await _context.SaveChangesAsync();
-            return assignment;
+            return true;
         }
 
         public async Task<bool> DeleteAssignment(int id)

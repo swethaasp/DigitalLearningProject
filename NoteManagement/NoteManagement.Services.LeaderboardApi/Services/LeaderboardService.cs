@@ -14,8 +14,8 @@ namespace NoteManagement.Services.LeaderboardApi.Services
         }
         public async Task<List<Leaderboard>> GetLeaderboards()
         {
-            var UserLink = "https://localhost:7080/api/User";
-            var StreakLink = "https://localhost:7055/api/Streak";
+            var UserLink = "https://localhost:5007/api/User";
+            var StreakLink = "https://localhost:5006/api/Streak";
             var users=await _httpclient.GetAsync(UserLink);
             var streak=await _httpclient.GetAsync(StreakLink);
             if(users.IsSuccessStatusCode && streak.IsSuccessStatusCode)

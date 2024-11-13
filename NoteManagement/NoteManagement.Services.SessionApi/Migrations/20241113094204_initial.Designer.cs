@@ -5,15 +5,15 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using NoteManagement.Services.NoteApi.Data;
+using NoteManagement.Services.SessionApi.Data;
 
 #nullable disable
 
-namespace NoteManagement.Services.NoteApi.Migrations
+namespace NoteManagement.Services.SessionApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241107210151_noteTakingApi")]
-    partial class noteTakingApi
+    [Migration("20241113094204_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace NoteManagement.Services.NoteApi.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("NoteManagement.Services.NoteApi.Models.Note", b =>
+            modelBuilder.Entity("NoteManagement.Services.SessionApi.Models.Session", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -33,10 +33,10 @@ namespace NoteManagement.Services.NoteApi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("DateCreated")
-                        .HasColumnType("datetime2");
+                    b.Property<int>("AssignmentId")
+                        .HasColumnType("int");
 
-                    b.Property<DateTime>("DateModified")
+                    b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
@@ -51,12 +51,13 @@ namespace NoteManagement.Services.NoteApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Notes");
+                    b.ToTable("Sessions");
                 });
 #pragma warning restore 612, 618
         }

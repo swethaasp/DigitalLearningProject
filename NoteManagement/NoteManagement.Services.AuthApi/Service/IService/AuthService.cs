@@ -39,6 +39,10 @@ namespace NoteManagement.Srevices.AuthApi.Service.IService
                     _roleManager.CreateAsync(new IdentityRole(roleName)).GetAwaiter().GetResult();
                 }
                 await _userManager.AddToRoleAsync(user,roleName);
+                if (roleName.ToLower() != "user")
+                {
+                    await _userManager.RemoveFromRoleAsync(user, "User");
+                }
                 return true;
 
             }
@@ -74,6 +78,7 @@ namespace NoteManagement.Srevices.AuthApi.Service.IService
 
         public async Task<string> Register(RegistrationRequestDto registrationRequestDto)
         {
+            // Initialize user entity
             ApplicationUser user = new()
             {
                 UserName = registrationRequestDto.Email,
@@ -81,91 +86,71 @@ namespace NoteManagement.Srevices.AuthApi.Service.IService
                 NormalizedEmail = registrationRequestDto.Email.ToUpper(),
                 Name = registrationRequestDto.Name,
                 PhoneNumber = registrationRequestDto.PhoneNumber,
-
             };
+
             try
-            {   // Prepare user data for User API
+            {
+                var result = await _userManager.CreateAsync(user, registrationRequestDto.Password);
+                if (!result.Succeeded)
+                {
+                    return result.Errors.FirstOrDefault()?.Description ?? "User creation failed.";
+                }
+
+                // Prepare user data for User API and Streak API with created user.Id
                 var userData = new User
                 {
                     IdentityUserId = user.Id,
                     DisplayName = registrationRequestDto.Name
                 };
 
-                var StreakData = new StreakDto
+                var streakData = new StreakDto
                 {
                     IdentityUserId = user.Id,
                     Streak = 0
                 };
 
-                // Call User API to save additional user information
-                var userApiUrl = "https://localhost:7080/api/User"; // Replace with actual URL
+                // Call User API
+                var userApiUrl = "https://localhost:5007/api/User";
                 var userContent = new StringContent(JsonSerializer.Serialize(userData), Encoding.UTF8, "application/json");
-
-                var response = await _httpClient.PostAsync(userApiUrl, userContent);
-
-                if (!response.IsSuccessStatusCode)
+                var userApiResponse = await _httpClient.PostAsync(userApiUrl, userContent);
+                if (!userApiResponse.IsSuccessStatusCode)
                 {
-                    return  "Failed to save user info in User API.";
+                    await _userManager.DeleteAsync(user);  // Clean up the user if external API fails
+                    return "Failed to save user info in User API.";
                 }
 
-                // Call Streak API to save additional user information
-                var StreakApiUrl = "https://localhost:7055/api/Streak/Create"; // Replace with actual URL
-                var StreakContent = new StringContent(JsonSerializer.Serialize(StreakData), Encoding.UTF8, "application/json");
-
-                var respon = await _httpClient.PostAsync(StreakApiUrl, StreakContent);
-
-                if (!respon.IsSuccessStatusCode)
+                // Call Streak API
+                var streakApiUrl = "https://localhost:5006/api/Streak/Create";
+                var streakContent = new StringContent(JsonSerializer.Serialize(streakData), Encoding.UTF8, "application/json");
+                var streakApiResponse = await _httpClient.PostAsync(streakApiUrl, streakContent);
+                if (!streakApiResponse.IsSuccessStatusCode)
                 {
+                    await _userManager.DeleteAsync(user);  // Clean up the user if external API fails
                     return "Failed to save Streak info in Streak API.";
                 }
 
-
-
-                var result = await _userManager.CreateAsync(user, registrationRequestDto.Password);
-                if (result.Succeeded)
+                // Assign Role to User
+                if (!await _roleManager.RoleExistsAsync("User"))
                 {
-                    var userToReturn = _db.ApplicationUser.First(user => user.UserName == registrationRequestDto.Email);
-
-                    //working on this
-                    var roleExist = await _roleManager.RoleExistsAsync("User");
-                    if (!roleExist)
-                    {
-                        await _roleManager.CreateAsync(new IdentityRole("User"));
-                    }
-
-
-                    var resp = await _userManager.AddToRoleAsync(userToReturn, "User");
-
-                    if (!resp.Succeeded)
-                    {
-                        return "Failed to save user info in User API.";
-                    }
-
-
-                    UserDto userDto = new()
-                    {
-                        Email = userToReturn.Email,
-                        Id = userToReturn.Id,
-                        Name = userToReturn.Name,
-                        PhoneNumber = userToReturn.PhoneNumber
-                    };
-
-
-
-                    return "";
-                }
-                else
-                {
-                    return result.Errors.FirstOrDefault().Description;
+                    await _roleManager.CreateAsync(new IdentityRole("User"));
                 }
 
+                var roleResult = await _userManager.AddToRoleAsync(user, "User");
+                if (!roleResult.Succeeded)
+                {
+                    await _userManager.DeleteAsync(user);  // Clean up if role assignment fails
+                    return "Failed to assign user role.";
+                }
+
+                // Success
+                return "";
             }
             catch (Exception ex)
             {
-
+                // Return exception message or log it as per requirement
+                return $"Registration failed: {ex.Message}";
             }
-            return ("Error Encountered");
-            
         }
+
     }
 }

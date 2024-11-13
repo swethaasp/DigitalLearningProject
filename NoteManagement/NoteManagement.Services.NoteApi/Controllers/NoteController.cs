@@ -17,7 +17,7 @@ namespace NoteManagement.Services.NoteApi.Controllers
 
         // GET: api/Note/byuser/{userId}
         [HttpGet("byuser/{userId}")]
-        public async Task<IActionResult> GetNotesByUser(int userId)
+        public async Task<IActionResult> GetNotesByUser(string userId)
         {
             var notes = await _noteRepository.GetNotesByUser(userId);
             return Ok(notes);
@@ -56,13 +56,13 @@ namespace NoteManagement.Services.NoteApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateNote(int id, [FromBody] Note note)
         {
-            if (id != note.Id)
+        
+            bool res=await _noteRepository.UpdateNote(id,note);
+            if (res)
             {
-                return BadRequest();
+                return Ok();
             }
-
-            await _noteRepository.UpdateNote(note);
-            return NoContent();
+            return BadRequest();
         }
 
         // DELETE: api/Note/{id}
