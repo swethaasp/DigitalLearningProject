@@ -1,9 +1,9 @@
 ﻿// File: Controllers/SessionController.cs
 using Microsoft.AspNetCore.Mvc;
 using NoteManagement.Services.SessionApi.Models;
-using NoteManagement.Services.SessionApi.Services;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace NoteManagement.Services.SessionApi.Controllers
@@ -17,6 +17,17 @@ namespace NoteManagement.Services.SessionApi.Controllers
         public SessionController(ISessionRepository repository)
         {
             _repository = repository;
+        }
+
+        // GET: api/Session
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Session>>> GetAllSessions()
+        {
+            var sessions = await _repository.GetAllSessions();
+            if (sessions == null || !sessions.Any())
+                return NoContent(); // HTTP 204 if no sessions found
+
+            return Ok(sessions); // HTTP 200 if sessions found
         }
 
         // GET: api/Session/user/{userId}

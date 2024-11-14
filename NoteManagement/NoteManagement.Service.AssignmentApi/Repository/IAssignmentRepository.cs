@@ -1,5 +1,4 @@
 ﻿using NoteManagement.Services.AssignmentApi.Models;
-using System.Threading.Tasks;
 
 namespace NoteManagement.Services.AssignmentApi.Repository
 {

@@ -1,8 +1,4 @@
-﻿// File: Services/ISessionRepository.cs
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using NoteManagement.Services.SessionApi.Models;
+﻿using NoteManagement.Services.SessionApi.Models;
 
 namespace NoteManagement.Services.SessionApi.Services
 {

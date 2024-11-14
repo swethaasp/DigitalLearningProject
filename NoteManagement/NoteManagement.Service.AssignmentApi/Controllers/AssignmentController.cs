@@ -18,6 +18,7 @@ namespace NoteManagement.Services.AssignmentApi.Controllers
         
         
 
+        // Get assignments by user ID
         [HttpGet("byuser/{userId}")]
         public async Task<IActionResult> GetAssignmentsByUser(string userId)
         {
@@ -25,6 +26,7 @@ namespace NoteManagement.Services.AssignmentApi.Controllers
             return Ok(assignments);
         }
 
+        // Get assignments by date assigned
         [HttpGet("bydate/{date}")]
         public async Task<IActionResult> GetAssignmentsByDate(DateTime date)
         {
@@ -32,6 +34,7 @@ namespace NoteManagement.Services.AssignmentApi.Controllers
             return Ok(assignments);
         }
 
+        // Get assignments by deadline
         [HttpGet("bydeadline/{date}")]
         public async Task<IActionResult> GetAssignmentsByDeadline(DateTime date)
         {
@@ -39,6 +42,7 @@ namespace NoteManagement.Services.AssignmentApi.Controllers
             return Ok(assignments);
         }
 
+        // Get assignments by title
         [HttpGet("bytitle/{title}")]
         public async Task<IActionResult> GetAssignmentsByTitle(string title)
         {
@@ -46,6 +50,7 @@ namespace NoteManagement.Services.AssignmentApi.Controllers
             return Ok(assignments);
         }
 
+        // Create new assignment
         [HttpPost]
         public async Task<IActionResult> CreateAssignment([FromBody] Assignment assignment)
         {
@@ -53,6 +58,7 @@ namespace NoteManagement.Services.AssignmentApi.Controllers
             return Ok();
         }
 
+        // Update existing assignment
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateAssignment(int id, [FromBody] Assignment assignment)
         {
@@ -61,6 +67,7 @@ namespace NoteManagement.Services.AssignmentApi.Controllers
             return NoContent();
         }
 
+        // Delete assignment
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAssignment(int id)
         {

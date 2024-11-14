@@ -2,7 +2,6 @@
 using NoteManagement.Services.AssignmentApi.Data;
 using NoteManagement.Services.AssignmentApi.Models;
 
-
 namespace NoteManagement.Services.AssignmentApi.Repository
 {
     public class AssignmentRepository : IAssignmentRepository
@@ -21,14 +20,14 @@ namespace NoteManagement.Services.AssignmentApi.Repository
             return await _context.Assignments.Where(a => a.UserId == userId).ToListAsync();
         }
 
-        public async Task<IEnumerable<Assignment>> GetAssignmentsByDate(DateTime dateAssigned)
+        public async Task<IEnumerable<Assignment>> GetAssignmentsByDate(DateTime date)
         {
-            return await _context.Assignments.Where(a => a.DateAssigned.Date == dateAssigned.Date).ToListAsync();
+            return await _context.Assignments.Where(a => a.DateAssigned.Date == date.Date).ToListAsync();
         }
 
-        public async Task<IEnumerable<Assignment>> GetAssignmentsByDeadline(DateTime deadline)
+        public async Task<IEnumerable<Assignment>> GetAssignmentsByDeadline(DateTime date)
         {
-            return await _context.Assignments.Where(a => a.Deadline.Date == deadline.Date).ToListAsync();
+            return await _context.Assignments.Where(a => a.Deadline.Date == date.Date).ToListAsync();
         }
 
         public async Task<IEnumerable<Assignment>> GetAssignmentsByTitle(string title)
@@ -62,7 +61,10 @@ namespace NoteManagement.Services.AssignmentApi.Repository
         public async Task<bool> DeleteAssignment(int id)
         {
             var assignment = await _context.Assignments.FindAsync(id);
-            if (assignment == null) return false;
+            if (assignment == null)
+            {
+                return false;
+            }
 
             _context.Assignments.Remove(assignment);
             await _context.SaveChangesAsync();

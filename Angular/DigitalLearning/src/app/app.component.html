@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+
+
+
+  <div class="container-fluid">
+
+   <a class="navbar-brand" href="javascript:void(0)">Resourceavailable</a>
+
+   <button
+
+   class="navbar-toggler"
+
+   type="button"
+
+   data-bs-toggle="collapse"
+
+   data-bs-target="#mynavbar"
+
+   >
+
+   <span class="navbar-toggler-icon"></span>
+
+  </button>
+
+  <div class="collapse navbar-collapse" id ="mynavbar">
+
+   <ul class="navbar-nav me-auto">
+
+   <li class="nav-item">
+
+    <a class="nav-link"routerLink="app-add-incident">EmergencyReport</a>
+
+   </li>
+
+   <li class="nav-item">
+
+    <a class="nav-link"routerLink="app-resource-avl">Resourceavailable</a>
+
+    </li>
+
+    <li class="nav-item">
+
+    <a class="nav-link"routerLink="app-incident-display">IncidentReportList</a>
+
+    </li>
+
+    <li class="nav-item">
+
+    <a class="nav-link"routerLink="app-update-incident">UpdateIncidentReport</a>
+
+    </li>
+
+   </ul>
+
+   <form class="d-flex">
+
+   <input class="form-controlme-2" type="text" placeholder="Search"/>
+
+   <button class="btn btn-primary" type="button">Search</button>
+
+   </form>
+
+  </div>
+
+  </div>
+
+  </nav>
+
+  <router-outlet/>
