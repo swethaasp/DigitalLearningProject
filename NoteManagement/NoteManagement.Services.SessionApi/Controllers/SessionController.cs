@@ -1,6 +1,7 @@
 ﻿// File: Controllers/SessionController.cs
 using Microsoft.AspNetCore.Mvc;
 using NoteManagement.Services.SessionApi.Models;
+using NoteManagement.Services.SessionApi.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,21 +21,17 @@ namespace NoteManagement.Services.SessionApi.Controllers
         }
 
         // GET: api/Session
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Session>>> GetAllSessions()
-        {
-            var sessions = await _repository.GetAllSessions();
-            if (sessions == null || !sessions.Any())
-                return NoContent(); // HTTP 204 if no sessions found
-
-            return Ok(sessions); // HTTP 200 if sessions found
-        }
-
+        
         // GET: api/Session/user/{userId}
-        [HttpGet("user/{userId}")]
-        public async Task<ActionResult<IEnumerable<Session>>> GetAllSessionsByUser(string userId)
+        [HttpGet("user")]
+        public async Task<ActionResult<IEnumerable<Session>>> GetAllSessionsByUser()
         {
-            var sessions = await _repository.GetAllSessionsByUser(userId);
+            var userid = HttpContext.Request.Headers["X-User-Id"].FirstOrDefault();
+            if (userid == null)
+            {
+                return Unauthorized("No Userid in token");
+            }
+            var sessions = await _repository.GetAllSessionsByUser(userid);
             if (sessions == null || !sessions.Any())
                 return NoContent(); // HTTP 204 if no sessions found
 
@@ -45,7 +42,12 @@ namespace NoteManagement.Services.SessionApi.Controllers
         [HttpGet("date/{date}")]
         public async Task<ActionResult<IEnumerable<Session>>> GetAllSessionsByDate(DateTime date)
         {
-            var sessions = await _repository.GetAllSessionsByDate(date);
+            var userid = HttpContext.Request.Headers["X-User-Id"].FirstOrDefault();
+            if (userid == null)
+            {
+                return Unauthorized("No Userid in token");
+            }
+            var sessions = await _repository.GetAllSessionsByDate(date,userid);
             if (sessions == null || !sessions.Any())
                 return NoContent(); // HTTP 204 if no sessions found
 
@@ -56,7 +58,12 @@ namespace NoteManagement.Services.SessionApi.Controllers
         [HttpGet("title/{title}")]
         public async Task<ActionResult<IEnumerable<Session>>> GetAllSessionsByTitle(string title)
         {
-            var sessions = await _repository.GetAllSessionsByTitle(title);
+            var userid = HttpContext.Request.Headers["X-User-Id"].FirstOrDefault();
+            if (userid == null)
+            {
+                return Unauthorized("No Userid in token");
+            }
+            var sessions = await _repository.GetAllSessionsByTitle(title,userid);
             if (sessions == null || !sessions.Any())
                 return NoContent(); // HTTP 204 if no sessions found
 

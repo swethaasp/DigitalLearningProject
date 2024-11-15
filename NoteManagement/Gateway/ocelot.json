@@ -18,6 +18,12 @@
       "FileCacheOptions": { "TtlSeconds": 10 }
     },
 
+
+
+
+
+
+
     {
       "UpstreamPathTemplate": "/assignment/{everything}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
@@ -29,8 +35,17 @@
           "Port": 5002
         }
       ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "AddHeadersToDownstream": {
+        "X-User-Id": "Claims[userid] > value" 
+      },
       "FileCacheOptions": { "TtlSeconds": 10 }
+    
     },
+
 
     {
       "UpstreamPathTemplate": "/leaderboard/{everything}",
@@ -43,8 +58,19 @@
           "Port": 5003
         }
       ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      
       "FileCacheOptions": { "TtlSeconds": 10 }
     },
+
+
+
+
+
+
 
     {
       "UpstreamPathTemplate": "/notes/{everything}",
@@ -57,8 +83,16 @@
           "Port": 5004
         }
       ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "AddHeadersToDownstream": {
+        "X-User-Id": "Claims[userid] > value" // This will extract userId claim and pass it as a header
+      },
       "FileCacheOptions": { "TtlSeconds": 10 }
     },
+
 
 
     {
@@ -72,8 +106,19 @@
           "Port": 5005
         }
       ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      
+      "AddHeadersToRequest": {
+        "X-User-Id": "Claims[userid] > value" // This will extract userId claim and pass it as a header
+      },
       "FileCacheOptions": { "TtlSeconds": 10 }
     },
+
+
+
 
     {
       "UpstreamPathTemplate": "/streak/{everything}",
@@ -86,8 +131,18 @@
           "Port": 5006
         }
       ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "AddHeadersToDownstream": {
+        "X-User-Id": "Claims[userid] > value" // This will extract userId claim and pass it as a header
+      },
       "FileCacheOptions": { "TtlSeconds": 10 }
     },
+
+
+
 
     {
       "UpstreamPathTemplate": "/user/{everything}",
@@ -100,6 +155,13 @@
           "Port": 5007
         }
       ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "AddHeadersToDownstream": {
+        "X-User-Id": "Claims[userid] > value" // This will extract userId claim and pass it as a header
+      },
       "FileCacheOptions": { "TtlSeconds": 10 }
     }
 

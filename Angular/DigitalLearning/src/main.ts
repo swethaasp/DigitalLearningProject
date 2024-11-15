@@ -6,9 +6,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AssignmentComponent } from './app/pages/assignment/assignment.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app/app.component';
 
 
-bootstrapApplication(SessionComponent, {
+bootstrapApplication(AppComponent, {
   providers: [
     provideHttpClient(),
     importProvidersFrom(BrowserAnimationsModule),

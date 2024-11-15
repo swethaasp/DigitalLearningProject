@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using NoteManagement.Services.SessionApi.Data;
+using NoteManagement.Services.SessionApi.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);

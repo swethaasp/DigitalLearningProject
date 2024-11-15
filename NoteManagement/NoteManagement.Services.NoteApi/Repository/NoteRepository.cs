@@ -19,22 +19,31 @@ namespace NoteManagement.Services.NoteApi.Repository
             return await _context.Notes.Where(n => n.UserId == userId).ToListAsync();
         }
 
-        public async Task<List<Note>> GetNoteByCreatedDate(DateTime dateCreated) // Updated method name
+        public async Task<List<Note>> GetNoteByCreatedDate(DateTime dateCreated,string userid) // Updated method name
         {
-            return await _context.Notes.Where(n => n.DateCreated.Date == dateCreated.Date).ToListAsync();
+            return await _context.Notes.Where(n => n.DateCreated.Date == dateCreated.Date && n.UserId==userid).ToListAsync();
         }
 
 
-        public async Task<List<Note>> GetNoteByModifiedDate(DateTime dateModified)
+        public async Task<List<Note>> GetNoteByModifiedDate(DateTime dateModified, string userid)
         {
-            return await _context.Notes.Where(n => n.DateModified.Date == dateModified.Date).ToListAsync()  ;
+            return await _context.Notes.Where(n => n.DateModified.Date == dateModified.Date && n.UserId==userid).ToListAsync()  ;
         }
 
-        public async Task<Note> CreateNote(Note note)
+        public async Task<Note> CreateNote(Note note,string userid)
         {
-            _context.Notes.Add(note);
+            Note n = new Note()
+            {
+                UserId = userid,
+                Title = note.Title,
+                Description = note.Description,
+                DateCreated = note.DateCreated,
+                DateModified = note.DateModified,
+                Resources = note.Resources,
+            };
+            _context.Notes.Add(n);
             await _context.SaveChangesAsync();
-            return note;
+            return n;
         }
 
         public async Task<bool> UpdateNote(int id,Note note)

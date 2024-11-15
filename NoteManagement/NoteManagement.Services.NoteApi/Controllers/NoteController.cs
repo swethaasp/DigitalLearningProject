@@ -16,10 +16,15 @@ namespace NoteManagement.Services.NoteApi.Controllers
         }
 
         // GET: api/Note/byuser/{userId}
-        [HttpGet("byuser/{userId}")]
-        public async Task<IActionResult> GetNotesByUser(string userId)
+        [HttpGet("byuser")]
+        public async Task<IActionResult> GetNotesByUser()
         {
-            var notes = await _noteRepository.GetNotesByUser(userId);
+            var userid = HttpContext.Request.Headers["X-User-Id"].FirstOrDefault();
+            if (userid == null)
+            {
+                return Unauthorized("No Userid in token");
+            }
+            var notes = await _noteRepository.GetNotesByUser(userid);
             return Ok(notes);
         }
 
@@ -27,7 +32,12 @@ namespace NoteManagement.Services.NoteApi.Controllers
         [HttpGet("bycreateddate/{date}")]
         public async Task<IActionResult> GetNoteByCreatedDate(DateTime date) // Updated method name
         {
-            var note = await _noteRepository.GetNoteByCreatedDate(date);
+            var userid = HttpContext.Request.Headers["X-User-Id"].FirstOrDefault();
+            if (userid == null)
+            {
+                return Unauthorized("No Userid in token");
+            }
+            var note = await _noteRepository.GetNoteByCreatedDate(date,userid);
             if (note == null)
             {
                 return NotFound();
@@ -40,7 +50,12 @@ namespace NoteManagement.Services.NoteApi.Controllers
         [HttpGet("bymodifieddate/{date}")]
         public async Task<IActionResult> GetNotesByModifiedDate(DateTime date)
         {
-            var notes = await _noteRepository.GetNoteByModifiedDate(date);
+            var userid = HttpContext.Request.Headers["X-User-Id"].FirstOrDefault();
+            if (userid == null)
+            {
+                return Unauthorized("No Userid in token");
+            }
+            var notes = await _noteRepository.GetNoteByModifiedDate(date,userid);
             return Ok(notes);
         }
 
@@ -48,7 +63,12 @@ namespace NoteManagement.Services.NoteApi.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateNote([FromBody] Note note)
         {
-            var createdNote = await _noteRepository.CreateNote(note);
+            var userid = HttpContext.Request.Headers["X-User-Id"].FirstOrDefault();
+            if (userid == null)
+            {
+                return Unauthorized("No Userid in token");
+            }
+            var createdNote = await _noteRepository.CreateNote(note,userid);
             return CreatedAtAction(nameof(GetNotesByUser), new { userId = createdNote.UserId }, createdNote);
         }
 

@@ -27,6 +27,7 @@ namespace microservices.Srevices.AuthAPI
             builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
             builder.Services.AddScoped<IAuthService,AuthService>();
             builder.Services.AddHttpClient();
+            builder.Services.AddCors();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
