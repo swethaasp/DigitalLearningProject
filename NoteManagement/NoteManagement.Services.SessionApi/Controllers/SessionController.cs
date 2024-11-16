@@ -74,7 +74,12 @@ namespace NoteManagement.Services.SessionApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Session>> CreateSession(Session session)
         {
-            var createdSession = await _repository.CreateSession(session);
+            var userid = HttpContext.Request.Headers["X-User-Id"].FirstOrDefault();
+            if (userid == null)
+            {
+                return Unauthorized("No Userid in token");
+            }
+            var createdSession = await _repository.CreateSession(session,userid);
             return CreatedAtAction(nameof(GetAllSessionsByUser), new { userId = session.UserId }, createdSession); // HTTP 201 Created
         }
 
