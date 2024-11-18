@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { DashboardService } from '../../services/dashboard.service';
+import { NoteService } from '../../services/notes.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -17,17 +18,29 @@ export class DashboardComponent {
   count:number | undefined;
   ct:number=0;
   totalct: number=0;
-  constructor(private dash:DashboardService){}
+  notecount: number=0;
+  topnote: any;
+  constructor(private dash:DashboardService,private noteservice:NoteService){}
   ngOnInit(): void {
     // Call loadData when the component is initialized
     this.loadData();
     this.getpendindassignment();
     this.getassignmentcount();
     this.getusr();
+    this.getnote();
     this.ct=0;
     // this.totalct;
   }
   
+
+  getnote(){
+    this.noteservice.getNotesByUser().subscribe(
+      (response)=>{
+        this.notecount=response.length;
+        this.topnote=response[0];
+      }
+    )
+  }
 
   loadData(){
     this.dash.getquote().subscribe(
