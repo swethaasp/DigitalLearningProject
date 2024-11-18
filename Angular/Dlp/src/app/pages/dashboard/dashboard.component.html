@@ -1,54 +1,5 @@
-<!-- 
-    <section>
-      <h1 class="font-bold text-2xl">We need UI/UX designer</h1>
-      <article class="mt-8 text-gray-500 leading-7 tracking-wider">
-        <p>Hi Akhil,</p>
-        <p>Design and develop enterprise-facing UI and consumer-facing UI as well as
-          REST API
-          backends.Work with
-          Product Managers and User Experience designers to create an appealing user experience for desktop web and
-          mobile web.</p>
-        <footer class="mt-12">
-          <p>Thanks & Regards,</p>
-          <p>Alexandar</p>
-        </footer>
-      </article>
-      <ul class="flex space-x-4 mt-12">
-        <li
-          class="w-10 h-10 border rounded-lg p-1 cursor-pointer transition duration-200 text-indigo-600 hover:bg-blue-100">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-              d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-          </svg>
-        </li>
-        <li
-          class="w-10 h-10 border rounded-lg p-1 cursor-pointer transition duration-200 text-blue-800 hover:bg-blue-100">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-              d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
-          </svg>
-        </li>
-        <li
-          class="w-10 h-10 border rounded-lg p-1 cursor-pointer transition duration-200 text-pink-400 hover:bg-blue-100">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-              d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
-          </svg>
-        </li>
-        <li
-          class="w-10 h-10 border rounded-lg p-1 cursor-pointer transition duration-200 text-yellow-500 hover:bg-blue-100">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-              d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
-          </svg>
-        </li>
-      </ul>
-    </section>
-    
- -->
-<div class="bg-gray-50 py-24 sm:py-8">
+
+<div class="bg-gray-50 py-8 sm:py-8">
   <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
     <!-- <h2 class="text-center text-base/7 font-semibold text-indigo-600">Deploy faster</h2> -->
     <p
@@ -70,10 +21,30 @@
             >
               Recent Note
             </p>
-            <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo.
-            </p>
+            <ul role="list" class="divide-y divide-gray-100 mt-2">
+              <li class="flex justify-between gap-x-6 py-5">
+                <div class="flex min-w-0 gap-x-4">
+                  <!-- <img class="size-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""> -->
+                  <div class="min-w-0 flex-auto">
+                    <p class="text-sm/6 font-semibold text-gray-900">
+                      {{ topnote.title }}
+                    </p>
+                    <p class="mt-1 truncate text-xs/5 text-gray-500">
+                      {{ topnote?.description.substring(0, 50)}}
+                      {{
+                        topnote?.description?.length > 50 ? "..." : ""
+                      }}
+                    </p>
+                  </div>
+                </div>
+                <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                  <p class="text-sm/6 text-gray-900">
+                    {{ topnote.resources }}
+                  </p>
+                  <!-- <p class="mt-1 text-xs/5 text-gray-500">today</p> -->
+                </div>
+              </li>
+            </ul>
           </div>
           <div
             class="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm"
@@ -187,7 +158,7 @@
                 <dd
                   class="mt-3 max-w-lg text-sm/6 text-gray-600 max-lg:text-center"
                 >
-                  Notes Created :
+                  Notes Created : {{notecount}}
                 </dd>
               </div>
               <div class="flex flex-col py-3">
@@ -209,7 +180,7 @@
               <div class="flex bg-white"></div>
               <img
                 class="mt-28 object-cover"
-                src="https://img.freepik.com/free-vector/career-path-concept-illustration_114360-16154.jpg?t=st=1731761548~exp=1731765148~hmac=94a12ab9cb0dde29cf8a66696bb9b111e9ca28783c343ff090595ab3ed5891e5&w=740"
+                src="https://img.freepik.com/free-vector/performance-overview-concept-illustration_114360-5186.jpg?t=st=1731937019~exp=1731940619~hmac=f53c5549aad9d3b72c9ce09e22f01c13bb59f44d57c724aab957bc45e0fb74a2&w=740"
                 alt=""
               />
             </div>
