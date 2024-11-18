@@ -12,7 +12,7 @@ import { NavbarService } from '../../services/navbar.service';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  streak:any;
+  streak:any=null;
   
   constructor(private router:Router,private navbarservice:NavbarService){}
   logout() {

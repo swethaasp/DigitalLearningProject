@@ -19,6 +19,9 @@ export class DashboardService {
   getAssignment(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl); 
   }
+  getAssignmentcount(): Observable<any[]> {
+    return this.http.get<any[]>('https://localhost:5000/assignment/'); 
+  }
   
 
   private Url = 'https://localhost:5000/user/ById'; 

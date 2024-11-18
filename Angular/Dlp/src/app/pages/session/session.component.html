@@ -114,7 +114,9 @@
             <tbody>
                 <tr *ngFor="let session of sessionList" class="bg-white border-b hover:bg-gray-50">
                     <th scope="row" (click)="openDescriptionPopup(session)" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                        {{session.title}}
+                        <a  class="text-gray-800 cursor-pointer hover:underline">
+                          {{session.title}}
+                        </a>
                     </th>
                     <td class="px-6 py-4">{{ session.date | date : "short" }}</td>
                     <td class="px-6 py-4">{{session.resources}}</td>

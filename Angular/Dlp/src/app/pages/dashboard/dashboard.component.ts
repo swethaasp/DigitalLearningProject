@@ -15,12 +15,17 @@ export class DashboardComponent {
   firstassignment:any;
   user:any;
   count:number | undefined;
+  ct:number=0;
+  totalct: number=0;
   constructor(private dash:DashboardService){}
   ngOnInit(): void {
     // Call loadData when the component is initialized
     this.loadData();
     this.getpendindassignment();
+    this.getassignmentcount();
     this.getusr();
+    this.ct=0;
+    // this.totalct;
   }
   
 
@@ -32,12 +37,21 @@ export class DashboardComponent {
       }
     )
   }
+  getassignmentcount(){
+    this.dash.getAssignmentcount().subscribe(
+      (response)=>
+      {
+        this.totalct=response.length;
+      }
+    )
+  }
 
   getpendindassignment(){
     this.dash.getAssignment().subscribe(
       (response)=>{
       this.firstassignment=response[0];
       this.count=response.length-1;
+      this.ct=response.length;
       }
     )
   }
