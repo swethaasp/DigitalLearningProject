@@ -24,8 +24,8 @@ namespace NoteManagement.Services.UserApi.Controllers
         }
 
 
-        [HttpGet("{id}")]
-        public IActionResult Get(string id)
+        [HttpGet("ById")]
+        public IActionResult Getbyid()
         {
             // Retrieve user ID from claims
 
@@ -37,6 +37,11 @@ namespace NoteManagement.Services.UserApi.Controllers
             //}
 
             //string userId = idClaim.Value;
+            var id = HttpContext.Request.Headers["X-User-Id"].FirstOrDefault().Trim();
+            if (id == null)
+            {
+                return Unauthorized("No Userid in token");
+            }
 
             string userId=id;
 

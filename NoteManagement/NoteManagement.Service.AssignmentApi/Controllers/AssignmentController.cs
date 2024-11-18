@@ -19,10 +19,10 @@ namespace NoteManagement.Services.AssignmentApi.Controllers
         
 
         // Get assignments by user ID
-        [HttpGet("byuser/{userId}")]
-        public async Task<IActionResult> GetAssignmentsByUser(string userId)
+        [HttpGet]
+        public async Task<IActionResult> GetallAssignments()
         {
-            var assignments = await _assignmentRepository.GetAssignmentsByUser(userId);
+            var assignments = await _assignmentRepository.GetallAssignments();
             return Ok(assignments);
         }
 

@@ -37,7 +37,7 @@ namespace NoteManagement.Srevices.AuthApi.Service.IService
             var roles = await userManager.GetRolesAsync(applicationUser);
             foreach (var role in roles)
             {
-                claimList.Add(new Claim(ClaimTypes.Role, role));
+                claimList.Add(new Claim("RoleS", role));
             }
 
             var tokenDescriptor = new SecurityTokenDescriptor
