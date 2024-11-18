@@ -24,10 +24,19 @@ namespace NoteManagement.Services.StreaksApi.Controllers
             return Ok(allStreaks);
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(string id)
+     
+
+        [HttpGet("ById")]
+        public async Task<IActionResult> GetById()
         {
-            var streak = await _streakService.GetStreakById(id);
+            var userid = HttpContext.Request.Headers["X-User-Id"].FirstOrDefault().Trim();
+            if (userid == null)
+            {
+                return Unauthorized("No Userid in token");
+            }
+            Console.WriteLine(userid);
+            var streak = await _streakService.GetStreakById(userid);
+            Console.WriteLine(streak);
             if (streak == null)
             {
                 return NotFound("Streak not found for the given user ID.");

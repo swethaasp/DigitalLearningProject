@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { Component } from '@angular/core';
 import { LeaderboardComponent } from './pages/leaderboard/leaderboard.component';
 import { AssignmentsComponent } from './pages/assignments/assignments.component';
+import { SessionComponent } from './pages/session/session.component';
 
 export const routes: Routes = [
     {path:"",component:WelcomeComponent},
@@ -16,6 +17,7 @@ export const routes: Routes = [
         {path:"",component:DashboardComponent},
         {path:"leaderboard",component:LeaderboardComponent},
         {path:"assignments",component:AssignmentsComponent},
+        {path:"sessions",component:SessionComponent},
 
     ]},
 

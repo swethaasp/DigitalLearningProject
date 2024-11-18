@@ -15,9 +15,9 @@ namespace NoteManagement.Services.AssignmentApi.Repository
 
         
 
-        public async Task<IEnumerable<Assignment>> GetAssignmentsByUser(string userId)
+        public async Task<IEnumerable<Assignment>> GetallAssignments()
         {
-            return await _context.Assignments.Where(a => a.UserId == userId).ToListAsync();
+            return await _context.Assignments.ToListAsync();
         }
 
         public async Task<IEnumerable<Assignment>> GetAssignmentsByDate(DateTime date)
