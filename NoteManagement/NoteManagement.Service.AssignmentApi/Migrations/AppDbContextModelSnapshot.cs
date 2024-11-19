@@ -30,6 +30,9 @@ namespace NoteManagement.Service.AssignmentApi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("AssignmentId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("DateAssigned")
                         .HasColumnType("datetime2");
 

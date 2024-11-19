@@ -3,6 +3,7 @@ import { AssignmentService } from '../../services/assignment.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { jwtDecode } from 'jwt-decode';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-assignments',
@@ -12,12 +13,14 @@ import { jwtDecode } from 'jwt-decode';
   styleUrl: './assignments.component.css',
 })
 export class AssignmentsComponent {
+
   assignment: any[] = [];
   userRole: string | null = null;
   isCreatePopupOpen: boolean = false;
   selsectedassignment: any;
   assignmentmodel = {
     id: 0,
+    assignmentId:'',
     dateAssigned: new Date().toISOString(),
     deadline: '',
     status: '',
@@ -27,7 +30,7 @@ export class AssignmentsComponent {
   };
   isDescriptionPopupOpen: boolean = false;
   isUpdatePopupOpen: boolean = false;
-  constructor(private AssignmentService: AssignmentService) {}
+  constructor(private AssignmentService: AssignmentService,private router : Router) {}
 
   ngOnInit(): void {
     this.fetchassignment();
@@ -44,11 +47,29 @@ export class AssignmentsComponent {
     }
   }
 
+
+  SubmitAssignment(data:any,id:number) {
+    if(confirm('Are you sure?')){
+      
+      this.AssignmentService.submit(data,id).subscribe(
+        (response)=>{
+          console.log(response);
+          this.fetchassignment();
+          this.router.navigate(['/home/assignments'])
+        }
+      );
+    }
+    
+    }
+
+
+
   submitCreateSession() {
     if (
       this.assignmentmodel.title != '' &&
       this.assignmentmodel.deadline != '' &&
-      this.assignmentmodel.description != ''
+      this.assignmentmodel.description != '' &&
+      this.assignmentmodel.assignmentId !=''
     ) {
       this.AssignmentService.createAssignment(this.assignmentmodel).subscribe(
         (response) => {
@@ -89,6 +110,7 @@ export class AssignmentsComponent {
   resetCreateForm() {
     this.assignmentmodel = {
       id: 0,
+      assignmentId:'',
       dateAssigned: new Date().toISOString(),
       deadline: '',
       status: '',
@@ -100,23 +122,15 @@ export class AssignmentsComponent {
 
   submitUpdate() {
     this.AssignmentService.updateAssignment(
-      this.selsectedassignment.id,
+      this.selsectedassignment.assignmentId,
       this.selsectedassignment
     ).subscribe({
       next: (response) => {
         console.log('Session updated successfully:', response);
 
-        // Manually update the session in the sessionList
 
-        const index = this.assignment.findIndex(
-          (assignment) => assignment.id === this.selsectedassignment.id
-        );
-
-        if (index !== -1) {
-          this.assignment[index] = { ...this.selsectedassignment }; // Update the session in the list
-        }
-
-        this.closeUpdatePopup(); // Close the popup
+        this.closeUpdatePopup(); 
+        this.fetchassignment();
       },
 
       error: (error) => {

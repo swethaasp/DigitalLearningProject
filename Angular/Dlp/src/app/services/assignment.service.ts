@@ -29,10 +29,21 @@ export class AssignmentService {
     return this.http.post(url,payload)
   }
 
+
+  submit(data:any,id:number):Observable<any>{
+    const url=`https://localhost:5000/assignment/Submit/${id}`;
+    console.log(url);
+    console.log(data);
+    return this.http.put(url,data);
+  }
+
+
   deleteAssignment(id: number): Observable<any> {
 
     const url = `https://localhost:5000/assignment/${id}`;
    
     return this.http.delete(url);
    
+
+  
 }}

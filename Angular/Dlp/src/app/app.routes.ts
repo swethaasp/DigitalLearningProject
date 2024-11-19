@@ -14,8 +14,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
 
 export const routes: Routes = [
     {path:"",component:WelcomeComponent},
-    {path:"login",component:LoginComponent},
-    {path:"signup",component:RegisterComponent},
+    {path:"login",component:LoginComponent,canActivate:[authGuard]},
+    {path:"signup",component:RegisterComponent,canActivate:[authGuard]},
     {path:"home",component:HomeComponent, canActivate:[authGuard] ,children:[
         {path:"",component:DashboardComponent},
         {path:"leaderboard",component:LeaderboardComponent},
