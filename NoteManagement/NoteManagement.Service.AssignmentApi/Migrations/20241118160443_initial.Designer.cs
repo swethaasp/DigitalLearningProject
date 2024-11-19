@@ -12,8 +12,8 @@ using NoteManagement.Services.AssignmentApi.Data;
 namespace NoteManagement.Service.AssignmentApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241113083349_changed datatype of user")]
-    partial class changeddatatypeofuser
+    [Migration("20241118160443_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,6 +32,9 @@ namespace NoteManagement.Service.AssignmentApi.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AssignmentId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("DateAssigned")
                         .HasColumnType("datetime2");

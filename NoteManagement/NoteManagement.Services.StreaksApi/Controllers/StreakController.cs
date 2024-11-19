@@ -55,8 +55,8 @@ namespace NoteManagement.Services.StreaksApi.Controllers
             return BadRequest();
         }
 
-        [HttpPut("Increment/{id}")]
-        public async Task<IActionResult> Increment(string id)
+        [HttpPut("Increment/")]
+        public async Task<IActionResult> Increment([FromBody] string id)
         {
             bool result = await _streakService.IncrementStreak(id);
             if (!result)

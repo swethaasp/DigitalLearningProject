@@ -42,6 +42,11 @@
               <th
                 class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
               >
+                ID
+              </th>
+              <th
+                class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+              >
                 Assignment Name
               </th>
               <th
@@ -57,13 +62,18 @@
               <th
                 class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
               >
-                tag
+                Status
               </th>
             </tr>
           </thead>
 
           <tbody>
             <tr *ngFor="let asnmt of assignment">
+              <td
+                class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+              >
+                {{ asnmt.assignmentId}}
+              </td>
               <th
                 (click)="openDescriptionPopup(asnmt)"
                 class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700"
@@ -80,24 +90,34 @@
               >
                 {{ asnmt.deadline | date : "short" }}
               </td>
+
               <td
                 class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
               >
-                <i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
+                <!-- <i class="fas fa-arrow-up text-emerald-500 mr-4"></i> -->
                 {{ asnmt.status }}
+              </td>
+              <td 
+                class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+              >
+              <a *ngIf="asnmt.status=='Incomplete'"
+              (click)="SubmitAssignment(asnmt,asnmt.id)"
+              class="font-medium text-blue-600 hover:underline"
+              >Submit</a
+            >
               </td>
               <td
                 *ngIf="userRole === 'ADMIN'"
                 class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
               >
-                <i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
+                <!-- <i class="fas fa-arrow-up text-emerald-500 mr-4"></i> -->
                 <a
                   (click)="openUpdatePopup(asnmt)"
                   class="font-medium text-blue-600 hover:underline"
                   >Edit</a
                 >
                 <a
-                  (click)="confirmDelete(asnmt.id)"
+                  (click)="confirmDelete(asnmt.assignmentId)"
                   class="ml-4 font-medium text-red-600 hover:underline"
                   >Delete</a
                 >
@@ -121,6 +141,17 @@
 
     <form (ngSubmit)="submitCreateSession()">
       <label class="block mb-2 text-sm font-medium">
+        Assignment Id
+
+        <input
+          type="text"
+          [(ngModel)]="assignmentmodel.assignmentId"
+          name="title"
+          class="w-full p-2 border rounded"
+        />
+      </label>
+
+      <label class="block mb-2 text-sm font-medium">
         Title:
 
         <input
@@ -141,16 +172,7 @@
         ></textarea>
       </label>
 
-      <label class="block mb-2 text-sm font-medium">
-        Tag:
-
-        <input
-          type="text"
-          [(ngModel)]="assignmentmodel.status"
-          name="resources"
-          class="w-full p-2 border rounded"
-        />
-      </label>
+      
 
       <label class="block mb-4 text-sm font-medium">
         Deadline:
@@ -190,6 +212,19 @@
     <h3 class="text-lg font-semibold mb-4">Update Session</h3>
 
     <form (ngSubmit)="submitUpdate()">
+      
+      <label class="block mb-2 text-sm font-medium">
+        Assignment Id:
+
+        <input
+          type="text"
+          
+          [(ngModel)]="selsectedassignment.assignmentId"
+          name="assid"
+          class="w-full p-2 border rounded"
+        />
+      </label>
+
       <label class="block mb-2 text-sm font-medium">
         Title:
 
@@ -212,16 +247,7 @@
         ></textarea>
       </label>
 
-      <label class="block mb-2 text-sm font-medium">
-        Tag:
-
-        <input
-          type="text"
-          [(ngModel)]="selsectedassignment.status"
-          name="resources"
-          class="w-full p-2 border rounded"
-        />
-      </label>
+      
 
       <label class="block mb-4 text-sm font-medium">
         Deadline:

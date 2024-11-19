@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NoteManagement.Services.AssignmentApi.Models;
 using NoteManagement.Services.AssignmentApi.Repository;
+using Swashbuckle.AspNetCore.SwaggerUI;
 
 namespace NoteManagement.Services.AssignmentApi.Controllers
 {
@@ -20,9 +21,14 @@ namespace NoteManagement.Services.AssignmentApi.Controllers
 
         // Get assignments by user ID
         [HttpGet]
-        public async Task<IActionResult> GetallAssignments()
+        public async Task<IActionResult> GetAssignmentsbyid()
         {
-            var assignments = await _assignmentRepository.GetallAssignments();
+            var userid = HttpContext.Request.Headers["X-User-Id"].FirstOrDefault();
+            if (userid == null)
+            {
+                return Unauthorized("No Userid in token");
+            }
+            var assignments = await _assignmentRepository.GetAssignmentbyId(userid);
             return Ok(assignments);
         }
 
@@ -36,9 +42,17 @@ namespace NoteManagement.Services.AssignmentApi.Controllers
 
         // Get assignments by deadline
         [HttpGet("bydeadline/{date}")]
+
+
         public async Task<IActionResult> GetAssignmentsByDeadline(DateTime date)
         {
-            var assignments = await _assignmentRepository.GetAssignmentsByDeadline(date);
+
+            var userid = HttpContext.Request.Headers["X-User-Id"].FirstOrDefault();
+            if (userid == null)
+            {
+                return Unauthorized("No Userid in token");
+            }
+            var assignments = await _assignmentRepository.GetAssignmentsByDeadline(userid,date);
             return Ok(assignments);
         }
 
@@ -66,6 +80,21 @@ namespace NoteManagement.Services.AssignmentApi.Controllers
             await _assignmentRepository.UpdateAssignment(id,assignment);
             return NoContent();
         }
+
+        [HttpPut("Submit/{id}")]
+
+        public async Task<IActionResult> putSubmit(int id, [FromBody] Assignment assignment)
+        {
+           
+            var res=await _assignmentRepository.SubmitAssignment(assignment, id);
+            if (res == true)
+            {
+                return Ok();
+            }
+            return BadRequest();
+
+        }
+        
 
         // Delete assignment
         [HttpDelete("{id}")]

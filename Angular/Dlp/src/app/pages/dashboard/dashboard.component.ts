@@ -29,6 +29,7 @@ export class DashboardComponent {
     this.getusr();
     this.getnote();
     this.ct=0;
+    this.count=0;
     // this.totalct;
   }
   
