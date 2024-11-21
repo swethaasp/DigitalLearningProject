@@ -16,10 +16,13 @@ namespace NoteManagement.Services.NoteApi.Repository
 
         public async Task<IEnumerable<Note>> GetNotesByUser(string userId)
         {
-            return await _context.Notes.Where(n => n.UserId == userId).ToListAsync();
+            return await _context.Notes
+                    .Where(n => n.UserId == userId)
+                    .OrderByDescending(n => n.DateModified)
+                    .ToListAsync();
         }
 
-        public async Task<List<Note>> GetNoteByCreatedDate(DateTime dateCreated,string userid) // Updated method name
+        public async Task<List<Note>> GetNoteByCreatedDate(DateTime dateCreated,string userid) 
         {
             return await _context.Notes.Where(n => n.DateCreated.Date == dateCreated.Date && n.UserId==userid).ToListAsync();
         }

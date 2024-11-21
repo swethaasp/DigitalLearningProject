@@ -39,7 +39,7 @@ export class AssignmentsComponent {
     if (token) {
       try {
         const decodedToken: any = jwtDecode(token);
-        this.userRole = decodedToken.RoleS || null; // Replace "role" with the correct key from your token assignmentmodel
+        this.userRole = decodedToken.RoleS || null; 
       } catch (error) {
         console.error('Error decoding token:', error);
         this.userRole = null;

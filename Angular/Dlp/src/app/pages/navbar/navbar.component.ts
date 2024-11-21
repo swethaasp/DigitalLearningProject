@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterOutlet } from '@angular/router';
 import { NavbarService } from '../../services/navbar.service';
+import { jwtDecode } from 'jwt-decode';
 
 @Component({
   selector: 'app-navbar',
@@ -13,6 +14,7 @@ import { NavbarService } from '../../services/navbar.service';
 })
 export class NavbarComponent {
   streak:any=null;
+  userRole: string | null = null;
   
   constructor(private router:Router,private navbarservice:NavbarService){}
   logout() {
@@ -28,6 +30,16 @@ export class NavbarComponent {
 
   ngOnInit(): void {
     this.fetchstreak();
+    const token = localStorage.getItem('token');
+    if (token) {
+      try {
+        const decodedToken: any = jwtDecode(token);
+        this.userRole = decodedToken.RoleS || null; 
+      } catch (error) {
+        console.error('Error decoding token:', error);
+        this.userRole = null;
+      }
+    }
   }
 
   fetchstreak(): void {

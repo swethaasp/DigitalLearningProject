@@ -1,5 +1,4 @@
-﻿// File: Controllers/SessionController.cs
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using NoteManagement.Services.SessionApi.Models;
 using NoteManagement.Services.SessionApi.Services;
 using System;
@@ -20,9 +19,7 @@ namespace NoteManagement.Services.SessionApi.Controllers
             _repository = repository;
         }
 
-        // GET: api/Session
         
-        // GET: api/Session/user/{userId}
         [HttpGet("user")]
         public async Task<ActionResult<IEnumerable<Session>>> GetAllSessionsByUser()
         {
@@ -33,12 +30,11 @@ namespace NoteManagement.Services.SessionApi.Controllers
             }
             var sessions = await _repository.GetAllSessionsByUser(userid);
             if (sessions == null || !sessions.Any())
-                return NoContent(); // HTTP 204 if no sessions found
+                return NoContent(); 
 
-            return Ok(sessions); // HTTP 200
+            return Ok(sessions); 
         }
 
-        // GET: api/Session/date/{date}
         [HttpGet("date/{date}")]
         public async Task<ActionResult<IEnumerable<Session>>> GetAllSessionsByDate(DateTime date)
         {
@@ -49,12 +45,11 @@ namespace NoteManagement.Services.SessionApi.Controllers
             }
             var sessions = await _repository.GetAllSessionsByDate(date,userid);
             if (sessions == null || !sessions.Any())
-                return NoContent(); // HTTP 204 if no sessions found
+                return NoContent(); 
 
-            return Ok(sessions); // HTTP 200
+            return Ok(sessions); 
         }
 
-        // GET: api/Session/title/{title}
         [HttpGet("title/{title}")]
         public async Task<ActionResult<IEnumerable<Session>>> GetAllSessionsByTitle(string title)
         {
@@ -65,12 +60,10 @@ namespace NoteManagement.Services.SessionApi.Controllers
             }
             var sessions = await _repository.GetAllSessionsByTitle(title,userid);
             if (sessions == null || !sessions.Any())
-                return NoContent(); // HTTP 204 if no sessions found
-
-            return Ok(sessions); // HTTP 200
+                return NoContent(); 
+            return Ok(sessions); 
         }
 
-        // POST: api/Session
         [HttpPost]
         public async Task<ActionResult<Session>> CreateSession(Session session)
         {
@@ -80,28 +73,27 @@ namespace NoteManagement.Services.SessionApi.Controllers
                 return Unauthorized("No Userid in token");
             }
             var createdSession = await _repository.CreateSession(session,userid);
-            return CreatedAtAction(nameof(GetAllSessionsByUser), new { userId = session.UserId }, createdSession); // HTTP 201 Created
+            return CreatedAtAction(nameof(GetAllSessionsByUser), new { userId = session.UserId }, createdSession);
         }
 
-        // PUT: api/Session/{id}
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateSession(int id, Session session)
         {
             
 
             await _repository.UpdateSession(id,session);
-            return NoContent(); // HTTP 204 No Content
+            return NoContent(); 
         }
 
-        // DELETE: api/Session/{id}
+        
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSession(int id)
         {
             var deleted = await _repository.DeleteSession(id);
             if (!deleted)
-                return NotFound(); // HTTP 404 if session not found
+                return NotFound();
 
-            return NoContent(); // HTTP 204 No Content
+            return NoContent(); 
         }
     }
 }

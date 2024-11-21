@@ -15,7 +15,7 @@ namespace NoteManagement.Services.NoteApi.Controllers
             _noteRepository = noteRepository;
         }
 
-        // GET: api/Note/byuser/{userId}
+        
         [HttpGet("byuser")]
         public async Task<IActionResult> GetNotesByUser()
         {
@@ -28,9 +28,10 @@ namespace NoteManagement.Services.NoteApi.Controllers
             return Ok(notes);
         }
 
-        // GET: api/Note/bycreateddate/{date}
+
+
         [HttpGet("bycreateddate/{date}")]
-        public async Task<IActionResult> GetNoteByCreatedDate(DateTime date) // Updated method name
+        public async Task<IActionResult> GetNoteByCreatedDate(DateTime date) 
         {
             var userid = HttpContext.Request.Headers["X-User-Id"].FirstOrDefault();
             if (userid == null)

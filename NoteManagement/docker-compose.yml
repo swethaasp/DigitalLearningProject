@@ -1,0 +1,86 @@
+version: '3.8'
+
+services:
+  gateway:
+    build:
+      context: ./Gateway
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80" # Expose Gateway API on port 8080
+    depends_on:
+      - authapi
+      - assignmentapi
+      - noteapi
+      - leaderboardapi
+      - sessionapi
+      - streaksapi
+      - userapi
+    networks:
+      - app-network
+
+  authapi:
+    build:
+      context: ./NoteManagement.Services.AuthApi
+      dockerfile: Dockerfile
+    ports:
+      - "5001:80" # Expose Auth API on port 8081
+    networks:
+      - app-network
+
+  assignmentapi:
+    build:
+      context: ./NoteManagement.Service.AssignmentApi
+      dockerfile: Dockerfile
+    ports:
+      - "5002:80" # Expose Assignment API on port 8082
+    networks:
+      - app-network
+
+  noteapi:
+    build:
+      context: ./NoteManagement.Services.NoteApi
+      dockerfile: Dockerfile
+    ports:
+      - "5004:80" # Expose Note API on port 8083
+    networks:
+      - app-network
+
+  leaderboardapi:
+    build:
+      context: ./NoteManagement.Services.LeaderboardApi
+      dockerfile: Dockerfile
+    ports:
+      - "5003:80" # Expose Leaderboard API on port 8084
+    networks:
+      - app-network
+
+  sessionapi:
+    build:
+      context: ./NoteManagement.Services.SessionApi
+      dockerfile: Dockerfile
+    ports:
+      - "5005:80" # Expose Session API on port 8085
+    networks:
+      - app-network
+
+  streaksapi:
+    build:
+      context: ./NoteManagement.Services.StreaksApi
+      dockerfile: Dockerfile
+    ports:
+      - "5006:80" # Expose Streaks API on port 8086
+    networks:
+      - app-network
+
+  userapi:
+    build:
+      context: ./NoteManagement.Services.UserApi
+      dockerfile: Dockerfile
+    ports:
+      - "5007:80" # Expose User API on port 8087
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

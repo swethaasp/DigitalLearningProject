@@ -12,7 +12,7 @@ import { NoteService } from '../../services/notes.service';
 
   standalone: true,
 
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule,],
 
   templateUrl: './notes.component.html',
 

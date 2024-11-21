@@ -100,7 +100,7 @@
               <td 
                 class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
               >
-              <a *ngIf="asnmt.status=='Incomplete'"
+              <a *ngIf="asnmt.status=='Incomplete' && userRole==='USER'"
               (click)="SubmitAssignment(asnmt,asnmt.id)"
               class="font-medium text-blue-600 hover:underline"
               >Submit</a
@@ -304,7 +304,8 @@
       <div class="grid grid-cols-3 gap-4">
         <dt class="text-sm font-medium text-gray-900">Description</dt>
         <dd class="col-span-2 text-sm text-gray-700">
-          {{ assignmentmodel.description }}
+          <!-- {{ assignmentmodel.description }} -->
+          <div [innerHTML]="assignmentmodel.description"></div>
         </dd>
       </div>
     </div>
