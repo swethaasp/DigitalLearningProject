@@ -6,11 +6,11 @@ namespace NoteManagement.Services.SessionApi.Models
     public class Session
     {
         public int Id { get; set; }
-        public DateTime Date { get; set; }  // Date of the session
-        public string Title { get; set; }   // Title of the session
-        public string Description { get; set; } // Description of the session
-        public string Resources { get; set; }   // Resources or materials associated with the session
-        public int AssignmentId { get; set; }   // Foreign key to Assignment
-        public string UserId { get; set; }         // Foreign key to User
+        public DateTime Date { get; set; } 
+        public string Title { get; set; }   
+        public string Description { get; set; } 
+        public string Resources { get; set; }   
+        public int AssignmentId { get; set; }  
+        public string UserId { get; set; }        
     }
 }

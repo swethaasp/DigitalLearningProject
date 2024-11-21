@@ -25,14 +25,14 @@ export class LoginComponent {
         console.log(response);
         if (response.result.token) {
           localStorage.setItem("token", response.result.token);
-          alert('Login successful! Token saved.');
+          alert('Login successful!');
           this.router.navigate(['/home']);
         } else {
           alert('Login successful, but no token found in response.');
         }
       },
       error => {
-        alert('Login failed: ' + (error.error?.message || 'An unknown error occurred.'));
+        alert('Login failed: Check Credentials');
       }
     );
   }

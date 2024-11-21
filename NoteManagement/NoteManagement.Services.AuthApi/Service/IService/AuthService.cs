@@ -35,7 +35,6 @@ namespace NoteManagement.Srevices.AuthApi.Service.IService
             {
                 if(!_roleManager.RoleExistsAsync(roleName).GetAwaiter().GetResult())
                 {
-                    //create role if it is not in existance
                     _roleManager.CreateAsync(new IdentityRole(roleName)).GetAwaiter().GetResult();
                 }
                 await _userManager.AddToRoleAsync(user,roleName);
@@ -54,7 +53,6 @@ namespace NoteManagement.Srevices.AuthApi.Service.IService
         {
             var user= _db.ApplicationUser.FirstOrDefault(u=>u.UserName.ToLower()== loginRequestDto.UserName.ToLower());
             bool isValid=await _userManager.CheckPasswordAsync(user, loginRequestDto.Password);
-            //if role found ,generate token
             var token = await _jwtTokenGenerator.GenerateToken(user, _userManager);
             if (isValid == false || user == null)
             {
@@ -78,7 +76,6 @@ namespace NoteManagement.Srevices.AuthApi.Service.IService
 
         public async Task<string> Register(RegistrationRequestDto registrationRequestDto)
         {
-            // Initialize user entity
             ApplicationUser user = new()
             {
                 UserName = registrationRequestDto.Email,
@@ -96,7 +93,6 @@ namespace NoteManagement.Srevices.AuthApi.Service.IService
                     return result.Errors.FirstOrDefault()?.Description ?? "User creation failed.";
                 }
 
-                // Prepare user data for User API and Streak API with created user.Id
                 var userData = new User
                 {
                     IdentityUserId = user.Id,
@@ -109,27 +105,26 @@ namespace NoteManagement.Srevices.AuthApi.Service.IService
                     Streak = 0
                 };
 
-                // Call User API
                 var userApiUrl = "https://localhost:5007/api/User";
                 var userContent = new StringContent(JsonSerializer.Serialize(userData), Encoding.UTF8, "application/json");
                 var userApiResponse = await _httpClient.PostAsync(userApiUrl, userContent);
                 if (!userApiResponse.IsSuccessStatusCode)
                 {
-                    await _userManager.DeleteAsync(user);  // Clean up the user if external API fails
+                    await _userManager.DeleteAsync(user);  
                     return "Failed to save user info in User API.";
                 }
 
-                // Call Streak API
+            
                 var streakApiUrl = "https://localhost:5006/api/Streak/Create";
                 var streakContent = new StringContent(JsonSerializer.Serialize(streakData), Encoding.UTF8, "application/json");
                 var streakApiResponse = await _httpClient.PostAsync(streakApiUrl, streakContent);
                 if (!streakApiResponse.IsSuccessStatusCode)
                 {
-                    await _userManager.DeleteAsync(user);  // Clean up the user if external API fails
+                    await _userManager.DeleteAsync(user); 
                     return "Failed to save Streak info in Streak API.";
                 }
 
-                // Assign Role to User
+
                 if (!await _roleManager.RoleExistsAsync("User"))
                 {
                     await _roleManager.CreateAsync(new IdentityRole("User"));
@@ -138,16 +133,14 @@ namespace NoteManagement.Srevices.AuthApi.Service.IService
                 var roleResult = await _userManager.AddToRoleAsync(user, "User");
                 if (!roleResult.Succeeded)
                 {
-                    await _userManager.DeleteAsync(user);  // Clean up if role assignment fails
+                    await _userManager.DeleteAsync(user);  
                     return "Failed to assign user role.";
                 }
 
-                // Success
                 return "";
             }
             catch (Exception ex)
             {
-                // Return exception message or log it as per requirement
                 return $"Registration failed: {ex.Message}";
             }
         }
